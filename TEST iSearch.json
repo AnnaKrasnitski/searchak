@@ -1,0 +1,80 @@
+{
+	"name": "iSearch-copy",
+	"description": "iSearch Widget copy",
+	"eula": "",
+	"vendor": "iProsis",
+	"license": "",
+	"id": "com.iProsis.sample.search",
+	"newInstancePrefix": "iSearch",
+	"icon" : "https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/67-512.png",
+	"version": "2.0.0",
+
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-iprosis-sample-search",
+			"url": "https://annakrasnitski.github.io/searchak/webcomponent.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+			
+		}
+
+	],
+	"properties": {
+		"width": {
+			"type": "number",
+			"default": 300
+		},
+		"height": {
+			"type": "number",
+			"default":50
+		},
+		"selectedValue":{
+			"type": "string",
+			"description": "Key result set"
+			
+		},
+		"selectedText":{
+			"type": "string",
+			"description": "Text result set"			
+		},
+		"sdata":{
+			"type": "string",
+			"description": "data"			
+		}
+	},
+	"methods": {
+		"getValue": {
+			"returnType": "string",
+			"description": "Returns the selected value",
+			"parameters": [],
+			"body": "return this.selectedValue;"
+		},
+		"getText": {
+			"returnType": "string",
+			"description": "Returns the selected text",
+			"parameters": [],
+			"body": "return this.selectedText;"
+		},
+		"getData": {
+			"description": "Returns the data as list",
+			"parameters":[ {
+				"name": "dataRes",
+				"type": "string",
+				"description": "list to suggest"
+			}],
+		"body": "this.sdata = dataRes;"
+		},
+		"setData":{
+			"returnType": "string",
+			"description": "Returns list - check",
+			"parameters": [],
+			"body": "return this.sdata;"
+		}
+	},
+	"events": {
+		"onSearch": {
+			"description": "On search event"
+		}
+	}
+}
