@@ -14,7 +14,6 @@
 	
 	</div>
 
-
 	`;
 
 class ISearch extends HTMLElement {
