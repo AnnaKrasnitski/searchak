@@ -1,6 +1,7 @@
 (function()  {
 	let tmpl = document.createElement('template');
 	tmpl.innerHTML = `
+	<link rel="stylesheet" href="https://sapui5.hana.ondemand.com/1.60.13/resources/sap/m/themes/sap_belize/library.css">
 
 	<script id="sap-ui-bootstrap"
 	src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
