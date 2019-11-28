@@ -76,7 +76,7 @@
 	class ISearch extends HTMLElement {
 		constructor() {
 			super();
-
+			var countries = [];
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 
@@ -165,20 +165,35 @@
 						}
 					}
 				}
+
+				this.setData = function(result){
+					 countries = [];
+					var x = "";
+					result.forEach(function(element) {
+			
+						data.push(x);	
+					 }
+				);
+				}
+
+				this.getData = function(){
+					return sdata;
+				};
+
 				document.addEventListener('click', function(e) {
-					closeAllLists(e.target);
+					//closeAllLists(e.target);
 				});
 			}
 
-			var countries = [
-				'Afghanistan',
-				'Albania',
-				'Algeria',
-				'Andorra',
-				'Angola',
-				'Anguilla',
-				'Antigua'
-			];
+			// var countries = [
+			// 	'Afghanistan',
+			// 	'Albania',
+			// 	'Algeria',
+			// 	'Andorra',
+			// 	'Angola',
+			// 	'Anguilla',
+			// 	'Antigua'
+			// ];
 
 			autocomplete(shadow.querySelector('#myInput'), countries);
 
