@@ -166,7 +166,7 @@
 					}
 				}
 				document.addEventListener('click', function(e) {
-					//closeAllLists(e.target);
+					closeAllLists(e.target);
 				});
 			}
 
