@@ -166,7 +166,7 @@
 					}
 				}
 
-				this.setData = function(result){
+				this.getData = function(result){
 					 countries = [];
 					var x = "";
 					result.forEach(function(element) {
@@ -176,7 +176,7 @@
 				);
 				}
 
-				this.getData = function(){
+				this.setData = function(){
 					return sdata;
 				};
 
