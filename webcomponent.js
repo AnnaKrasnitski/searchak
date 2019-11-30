@@ -179,14 +179,14 @@
 				result.forEach(function(element) {
 		
 					data.push(element);	
-					data=sdata;
+					//data=ISearch.sdata;
 				 }
 				
 			);
 			}
 
 			function setData(){
-				return sdata;
+				return ISearch.sdata;
 			};
 
 			var countries = [
