@@ -166,15 +166,15 @@
 					}
 				}
 
-				this.getData = function(result){
-					 countries = [];
-					var x = "";
-					result.forEach(function(element) {
+				// this.getData = function(result){
+				// 	 countries = [];
+				// 	var x = "";
+				// 	result.forEach(function(element) {
 			
-						data.push(x);	
-					 }
-				);
-				}
+				// 		data.push(x);	
+				// 	 }
+				// );
+				// }
 
 				this.setData = function(){
 					return sdata;
