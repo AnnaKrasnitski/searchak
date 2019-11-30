@@ -83,6 +83,8 @@
 			
 			function autocomplete(inp, arr) {
 				var currentFocus;
+
+
 				inp.addEventListener('input', function(e) {
 					var a,
 						b,
@@ -200,7 +202,7 @@
 			];
 
 			//var countries = [];
-			getData(ISearch.sdata);
+			getData(["ak","lk","yk"]);//ISearch.sdata);
 			var listik = setData();//ISearch.sdata
 			autocomplete(shadow.querySelector('#myInput'), listik);
 
