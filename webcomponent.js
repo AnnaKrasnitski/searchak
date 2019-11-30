@@ -227,6 +227,8 @@
 			if ("sdata" in changedProperties) {
 				this.data = changedProperties["sdata"];
 				console.log(`${this._props["sdata"]}`);
+
+				var mm =this.shadowRoot.querySelector('#container');
 				this.autocomplete(this.shadowRoot.getElementById("#container"), this.data);
 			}
 		}
