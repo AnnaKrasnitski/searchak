@@ -226,11 +226,11 @@
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
-		//	if ("sdata" in changedProperties) {
+			if ("sdata" in changedProperties) {
 				this.data = changedProperties["sdata"];
 				console.log(`${this._props["sdata"]}`);
-				this.autocomplete(shadow.querySelector('#myInput'), this.data);
-		//	}
+				this.autocomplete(this.shadow.querySelector('#myInput'), this.data);
+			}
 		}
 
 
