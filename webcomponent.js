@@ -227,11 +227,11 @@
 		onCustomWidgetAfterUpdate(changedProperties) {
 		//	if ("sdata" in changedProperties) {
 				this.data = changedProperties["sdata"];
-				console.log(`${this._props[sdata]}`);
+				console.log(`${this._props["sdata"]}`);
 		//	}
 		}
 
-		
+
 	}
 	/* Define web component - input: tag and class */
 	customElements.define('com-iprosis-sample-search', ISearch);
