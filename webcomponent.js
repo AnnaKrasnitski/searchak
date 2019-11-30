@@ -200,8 +200,8 @@
 			];
 
 			//var countries = [];
-			getData(["anna","liza"]);
-			var listik = setData();
+			getData(ISearch.sdata);
+			var listik = setData();//ISearch.sdata
 			autocomplete(shadow.querySelector('#myInput'), listik);
 
 			if (this._alive) {
