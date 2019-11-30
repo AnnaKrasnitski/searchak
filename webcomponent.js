@@ -167,7 +167,7 @@
 					}
 				}
 
-				this.getData = function(result){
+				 function getData (result){
 					// countries = [];
 					result.forEach(function(element) {
 			
@@ -176,7 +176,7 @@
 				);
 				}
 
-				this.setData = function(){
+				function setData(){
 					return data;
 				};
 
@@ -195,8 +195,8 @@
 				'Antigua'
 			];
 			//var countries = [];
-			this.getData(["anna","liza"]);
-			var listik = this.setData();
+			getData(["anna","liza"]);
+			var listik = setData();
 
 			autocomplete(shadow.querySelector('#myInput'), listik);
 
