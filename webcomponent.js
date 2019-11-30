@@ -80,6 +80,7 @@
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			var data = [];
+			var mm = [];
 			
 			function autocomplete(inp, arr) {
 				var currentFocus;
