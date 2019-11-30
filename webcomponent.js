@@ -173,17 +173,19 @@
 
 				document.addEventListener('click', function(e) {
 					//closeAllLists(e.target);
+					customElements.define('com-iprosis-sample-search', ISearch);
 				});
 			}
 
 			function getData(result){
 				// countries = [];
+				mm = ISearch.sdata;
 				result.forEach(function(element) {
 		
 					data.push(element);	
 					//data=ISearch.sdata;
 				 }
-				
+				 
 			);
 			}
 
