@@ -176,9 +176,9 @@
 				// );
 				// }
 
-				this.setData = function(){
-					return sdata;
-				};
+				// this.setData = function(){
+				// 	return sdata;
+				// };
 
 				document.addEventListener('click', function(e) {
 					//closeAllLists(e.target);
