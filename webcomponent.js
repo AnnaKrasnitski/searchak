@@ -76,12 +76,14 @@
 	class ISearch extends HTMLElement {
 		constructor() {
 			super();
-			var countries = [];
-			this.getData("anna","liza");
-			var listik = this.setData();
+			
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			
+			var countries = [];
+			this.getData("anna","liza");
+			var listik = this.setData();
+
 			function autocomplete(inp, arr) {
 				var currentFocus;
 				inp.addEventListener('input', function(e) {
@@ -204,7 +206,7 @@
 			} else {
 				this._alive = true;
 			}
-		}
+		} // end constructor
 	}
 	/* Define web component - input: tag and class */
 	customElements.define('com-iprosis-sample-search', ISearch);
