@@ -185,15 +185,15 @@
 				});
 			}
 
-			// var countries = [
-			// 	'Afghanistan',
-			// 	'Albania',
-			// 	'Algeria',
-			// 	'Andorra',
-			// 	'Angola',
-			// 	'Anguilla',
-			// 	'Antigua'
-			// ];
+			var countries = [
+				'Afghanistan',
+				'Albania',
+				'Algeria',
+				'Andorra',
+				'Angola',
+				'Anguilla',
+				'Antigua'
+			];
 
 			autocomplete(shadow.querySelector('#myInput'), countries);
 
