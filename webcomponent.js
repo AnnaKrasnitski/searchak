@@ -80,7 +80,7 @@
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			var data = [];
-			var mm = [];
+			//var mm = [];
 			
 			function autocomplete(inp, arr) {
 				var currentFocus;
@@ -173,14 +173,16 @@
 			
 
 				document.addEventListener('click', function(e) {
+					JSON.stringify(sdata);
+					console.log(JSON.stringify(sdata));
 					//closeAllLists(e.target);
-					customElements.define('com-iprosis-sample-search', ISearch);
+					//customElements.define('com-iprosis-sample-search', ISearch);
 				});
 			}
 
 			function getData(result){
 				// countries = [];
-				mm = ISearch.sdata;
+				//mm = ISearch.sdata;
 				result.forEach(function(element) {
 		
 					data.push(element);	
