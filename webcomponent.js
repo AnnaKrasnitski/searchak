@@ -174,10 +174,8 @@
 			
 
 				document.addEventListener('click', function(e) {
-					//JSON.stringify(sdata);
-					//console.log(JSON.stringify(JSON.));
+					
 					//closeAllLists(e.target);
-					//customElements.define('com-iprosis-sample-search', ISearch);
 				});
 			}
 
@@ -229,7 +227,7 @@
 			if ("sdata" in changedProperties) {
 				this.data = changedProperties["sdata"];
 				console.log(`${this._props["sdata"]}`);
-				this.autocomplete(this.shadow.querySelector('#myInput'), this.data);
+				this.autocomplete(this.querySelector('#myInput'), this.data);
 			}
 		}
 
