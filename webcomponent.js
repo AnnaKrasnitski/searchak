@@ -198,8 +198,8 @@
 			];
 
 			//var countries = [];
-			this.getData(["anna","liza"]);
-			var listik = this.setData();
+			getData(["anna","liza"]);
+			var listik = setData();
 			autocomplete(shadow.querySelector('#myInput'), listik);
 
 			if (this._alive) {
