@@ -167,23 +167,25 @@
 					}
 				}
 
-				 function getData (result){
-					// countries = [];
-					result.forEach(function(element) {
 			
-						data.push(element);	
-					 }
-				);
-				}
-
-				function setData(){
-					return data;
-				};
 
 				document.addEventListener('click', function(e) {
 					//closeAllLists(e.target);
 				});
 			}
+
+			function getData(result){
+				// countries = [];
+				result.forEach(function(element) {
+		
+					data.push(element);	
+				 }
+			);
+			}
+
+			function setData(){
+				return data;
+			};
 
 			var countries = [
 				'Afghanistan',
@@ -194,10 +196,10 @@
 				'Anguilla',
 				'Antigua'
 			];
-			//var countries = [];
-			getData(["anna","liza"]);
-			var listik = setData();
 
+			//var countries = [];
+			this.getData(["anna","liza"]);
+			var listik = this.setData();
 			autocomplete(shadow.querySelector('#myInput'), listik);
 
 			if (this._alive) {
