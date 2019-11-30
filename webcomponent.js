@@ -228,7 +228,7 @@
 		//	if ("sdata" in changedProperties) {
 				this.data = changedProperties["sdata"];
 				console.log(`${this._props["sdata"]}`);
-				listik = setData();
+				listik = this.setData();
 				autocomplete(shadow.querySelector('#myInput'), listik);
 		//	}
 		}
