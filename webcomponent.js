@@ -229,7 +229,7 @@
 				console.log(`${this._props["sdata"]}`);
 
 				var mm =this.shadowRoot.querySelector('#container');
-				var mm1 =mm.childNodes[1]('#myInput');
+				var mm1 =mm.childNodes[1];
 				this.autocomplete(mm1, this.data);
 			}
 		}
