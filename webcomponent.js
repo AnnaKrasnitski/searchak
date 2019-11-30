@@ -209,7 +209,7 @@
 
 			//var countries = [];
 			getData(["ak","lk","yk"]);//ISearch.sdata);
-			var listik = setData();//ISearch.sdata
+			var listik = setData();
 			autocomplete(shadow.querySelector('#myInput'), listik);
 
 			if (this._alive) {
@@ -228,6 +228,8 @@
 		//	if ("sdata" in changedProperties) {
 				this.data = changedProperties["sdata"];
 				console.log(`${this._props["sdata"]}`);
+				listik = setData();
+				autocomplete(shadow.querySelector('#myInput'), listik);
 		//	}
 		}
 
