@@ -217,6 +217,7 @@
 			} else {
 				this._alive = true;
 			}
+			this._props = {};
 		} // end constructor
 
 
@@ -228,7 +229,7 @@
 		//	if ("sdata" in changedProperties) {
 				this.data = changedProperties["sdata"];
 				console.log(`${this._props["sdata"]}`);
-				autocomplete(shadow.querySelector('#myInput'), this.data);
+				this.autocomplete(shadow.querySelector('#myInput'), this.data);
 		//	}
 		}
 
