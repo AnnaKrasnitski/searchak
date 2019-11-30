@@ -229,7 +229,7 @@
 				console.log(`${this._props["sdata"]}`);
 
 				var mm =this.shadowRoot.querySelector('#container');
-				var mm1 =mm.getElementsById('#myInput');
+				var mm1 =mm.getElementById('#myInput');
 				this.autocomplete(mm1, this.data);
 			}
 		}
