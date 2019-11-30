@@ -173,8 +173,8 @@
 			
 
 				document.addEventListener('click', function(e) {
-					JSON.stringify(sdata);
-					console.log(JSON.stringify(sdata));
+					//JSON.stringify(sdata);
+					//console.log(JSON.stringify(JSON.));
 					//closeAllLists(e.target);
 					//customElements.define('com-iprosis-sample-search', ISearch);
 				});
@@ -193,7 +193,7 @@
 			}
 
 			function setData(){
-				return ISearch.sdata;
+				return data;
 			};
 
 			var countries = [
