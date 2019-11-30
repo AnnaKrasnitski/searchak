@@ -77,9 +77,11 @@
 		constructor() {
 			super();
 			var countries = [];
+			getData("anna","liza");
+			var listik = this.setData();
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
-
+			
 			function autocomplete(inp, arr) {
 				var currentFocus;
 				inp.addEventListener('input', function(e) {
@@ -166,19 +168,19 @@
 					}
 				}
 
-				// this.getData = function(result){
-				// 	 countries = [];
-				// 	var x = "";
-				// 	result.forEach(function(element) {
+				this.getData = function(result){
+					 countries = [];
+					var x = "";
+					result.forEach(function(element) {
 			
-				// 		data.push(x);	
-				// 	 }
-				// );
-				// }
+						data.push(x);	
+					 }
+				);
+				}
 
-				// this.setData = function(){
-				// 	return sdata;
-				// };
+				this.setData = function(){
+					return data;
+				};
 
 				document.addEventListener('click', function(e) {
 					//closeAllLists(e.target);
@@ -195,7 +197,7 @@
 				'Antigua'
 			];
 
-			autocomplete(shadow.querySelector('#myInput'), countries);
+			autocomplete(shadow.querySelector('#myInput'), listik);
 
 			if (this._alive) {
 				return;
