@@ -81,16 +81,7 @@
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			var data = [];
 			
-			onCustomWidgetBeforeUpdate(changedProperties) {
-				this._props = { ...this._props, ...changedProperties };
-			}
-	
-			onCustomWidgetAfterUpdate(changedProperties) {
-			//	if ("sdata" in changedProperties) {
-					this.data = changedProperties["sdata"];
-					console.log(`${this._props[sdata]}`);
-			//	}
-			}
+			
 			
 			function autocomplete(inp, arr) {
 				var currentFocus;
@@ -227,6 +218,20 @@
 				this._alive = true;
 			}
 		} // end constructor
+
+
+		onCustomWidgetBeforeUpdate(changedProperties) {
+			this._props = { ...this._props, ...changedProperties };
+		}
+
+		onCustomWidgetAfterUpdate(changedProperties) {
+		//	if ("sdata" in changedProperties) {
+				this.data = changedProperties["sdata"];
+				console.log(`${this._props[sdata]}`);
+		//	}
+		}
+
+		
 	}
 	/* Define web component - input: tag and class */
 	customElements.define('com-iprosis-sample-search', ISearch);
