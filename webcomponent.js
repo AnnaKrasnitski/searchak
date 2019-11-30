@@ -80,7 +80,17 @@
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			var data = [];
-			//var mm = [];
+			
+			onCustomWidgetBeforeUpdate(changedProperties) {
+				this._props = { ...this._props, ...changedProperties };
+			}
+	
+			onCustomWidgetAfterUpdate(changedProperties) {
+			//	if ("sdata" in changedProperties) {
+					this.data = changedProperties["sdata"];
+					console.log(`${this._props[sdata]}`);
+			//	}
+			}
 			
 			function autocomplete(inp, arr) {
 				var currentFocus;
