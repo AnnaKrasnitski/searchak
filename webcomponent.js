@@ -79,11 +79,8 @@
 			
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
+			var data = [];
 			
-			var countries = [];
-			this.getData("anna","liza");
-			var listik = this.setData();
-
 			function autocomplete(inp, arr) {
 				var currentFocus;
 				inp.addEventListener('input', function(e) {
@@ -171,11 +168,10 @@
 				}
 
 				this.getData = function(result){
-					 countries = [];
-					var x = "";
+					// countries = [];
 					result.forEach(function(element) {
 			
-						data.push(x);	
+						data.push(element);	
 					 }
 				);
 				}
@@ -198,6 +194,9 @@
 				'Anguilla',
 				'Antigua'
 			];
+			//var countries = [];
+			this.getData("anna","liza");
+			var listik = this.setData();
 
 			autocomplete(shadow.querySelector('#myInput'), listik);
 
