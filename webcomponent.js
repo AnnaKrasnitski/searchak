@@ -77,7 +77,7 @@
 		constructor() {
 			super();
 			var countries = [];
-			getData("anna","liza");
+			this.getData("anna","liza");
 			var listik = this.setData();
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
