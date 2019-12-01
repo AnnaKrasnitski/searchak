@@ -33,10 +33,6 @@
 			"type": "string",
 			"description": "Key result set"
 		},
-		"selectedText": {
-			"type": "string",
-			"description": "Text result set"
-		},
 		"sdata": {
 			"type": "string",
 			"description": "data"
@@ -47,12 +43,6 @@
 			"returnType": "string",
 			"description": "Returns the selected value",
 			"parameters": []
-		},
-		"getText": {
-			"returnType": "string",
-			"description": "Returns the selected text",
-			"parameters": [],
-			"body": "return this.selectedText;"
 		},
 		"setDataModel": {
 			"description": "Sets the data",
