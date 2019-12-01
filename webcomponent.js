@@ -66,6 +66,7 @@
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			let that = this;
+			
 			function autocomplete(inp, that) {
 				let currentFocus;
 				inp.addEventListener('input', function(e) {
@@ -146,9 +147,14 @@
 				});
 			}
 			autocomplete(shadow.querySelector('#myInput'), that);
-		}
-		selectedValue = '';
-		dataModel = [
+
+		}  // end of constructor
+
+		/* initialization of selected value */
+		selectedValue = ''; 
+
+		//template until setter is pressed
+		dataModel = [ 
 			'Afghanistan',
 			'Albania',
 			'Algeria',
@@ -157,74 +163,18 @@
 			'Anguilla',
 			'Antigua'
 		];
-		countries = [
-			'Abkhazia',
-			'Afghanistan',
-			'Akrotiri and Dhekelia',
-			'Albania',
-			'Algeria',
-			'American Samoa',
-			'Andorra',
-			'Angola',
-			'Anguilla',
-			'Antigua and Barbuda',
-			'Argentina',
-			'Armenia',
-			'Brazil',
-			'British Virgin Islands',
-			'Brunei',
-			'Bulgaria',
-			'Cambodia',
-			'Costa Rica',
-			'Croatia',
-			'Cuba',
-			"Côte d'Ivoire",
-			'Dominican Republic',
-			'Federated States of Micronesia',
-			'Fiji',
-			'Finland',
-			'Greece',
-			'Guinea',
-			'Haiti',
-			'Israel',
-			'Hungary',
-			'Iceland',
-			'India'
-		];
-		capitals = [
-			'Sukhumi',
-			'Jeusalem',
-			'Kabul',
-			'Episkopi Cantonment',
-			'Tirana',
-			'Algiers',
-			'Pago Pago',
-			'Moskow',
-			'Andorra la Vella',
-			'Luanda',
-			'The Valley',
-			"St. John's",
-			'Buenos Aires',
-			'Yerevan',
-			'Oranjestad',
-			'Georgetown',
-			'Canberra',
-			'Asmara',
-			'Tallinn',
-			'Bissau',
-			'Georgetown',
-			'Port-au-Prince',
-			'Tegucigalpa',
-			'Budapest',
-			'Reykjavík',
-			'New Delhi'
-		];
+
+		/* getter of selected value */
 		getValue() {
 			return this.selectedValue;
 		}
+
+		/* getter of data list */
 		getDataModel() {
 			return this.dataModel;
 		}
+
+		/* setter od datalist to autocomplete*/
 		setDataModel(newdata) {
 			this.dataModel = newdata;
 		}

@@ -1,13 +1,13 @@
 {
-	"name": "iSearch-copy",
-	"description": "iSearch Widget copy",
+	"name": "iSearch-autocomplete",
+	"description": "iSearch Widget",
 	"eula": "",
 	"vendor": "iProsis",
 	"license": "",
 	"id": "com.iProsis.sample.search",
 	"newInstancePrefix": "iSearch",
-	"icon" : "https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/67-512.png",
-	"version": "2.0.0",
+	"icon" : "https://1001freedownloads.s3.amazonaws.com/icon/thumb/358904/Organic-Search-icon.png",
+	"version": "1.0.0",
 
 	"webcomponents": [
 		{
