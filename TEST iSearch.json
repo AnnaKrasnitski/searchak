@@ -27,28 +27,26 @@
 		},
 		"height": {
 			"type": "number",
-			"default":50
+			"default": 50
 		},
-		"selectedValue":{
+		"selectedValue": {
 			"type": "string",
 			"description": "Key result set"
-			
 		},
-		"selectedText":{
+		"selectedText": {
 			"type": "string",
-			"description": "Text result set"			
+			"description": "Text result set"
 		},
-		"sdata":{
+		"sdata": {
 			"type": "string",
-			"description": "data"			
+			"description": "data"
 		}
 	},
 	"methods": {
 		"getValue": {
 			"returnType": "string",
 			"description": "Returns the selected value",
-			"parameters": [],
-			"body": "return this.selectedValue;"
+			"parameters": []
 		},
 		"getText": {
 			"returnType": "string",
@@ -56,20 +54,20 @@
 			"parameters": [],
 			"body": "return this.selectedText;"
 		},
-		"getData": {
-			"description": "Returns the data as list",
-			"parameters":[ {
-				"name": "dataRes",
-				"type": "string",
-				"description": "list to suggest"
-			}],
-		"body": "this.sdata = dataRes;"
+		"setDataModel": {
+			"description": "Sets the data",
+			"parameters": [
+				{
+					"name": "newData",
+					"type": "string[]",
+					"description": "Array of string items"
+				}
+			]
 		},
-		"setData":{
-			"returnType": "string",
-			"description": "Returns list - check",
-			"parameters": [],
-			"body": "return this.sdata;"
+		"getDataModel": {
+			"returnType": "string[]",
+			"description": "Returns the data",
+			"parameters": []
 		}
 	},
 	"events": {
