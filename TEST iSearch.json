@@ -32,10 +32,6 @@
 		"selectedValue": {
 			"type": "string",
 			"description": "Key result set"
-		},
-		"sdata": {
-			"type": "string",
-			"description": "data"
 		}
 	},
 	"methods": {
