@@ -57,7 +57,7 @@
 			color: #ffffff; 
 		</style>
 		<div class="autocomplete" id="container">
-			<input id="myInput" type="text" name="myCountry" placeholder="Country">
+			<input id="myInput" type="text" name="myCountry" placeholder="Search">
 		</div>
 	`;
 	class ISearch extends HTMLElement {
