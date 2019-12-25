@@ -1,3 +1,4 @@
+<<<<<<< HEAD:iSearch.json
 {
 	"name": "iSearch-autocomplete",
 	"description": "iSearch Widget",
@@ -63,3 +64,69 @@
 		}
 	}
 }
+=======
+{
+	"name": "iSearch-autocomplete",
+	"description": "iSearch Widget",
+	"eula": "",
+	"vendor": "iProsis",
+	"license": "",
+	"id": "com.iProsis.sample.search",
+	"newInstancePrefix": "iSearch",
+	"icon" : "https://1001freedownloads.s3.amazonaws.com/icon/thumb/358904/Organic-Search-icon.png",
+	"version": "1.0.0",
+
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-iprosis-sample-search",
+			"url": "https://annaiProsis.github.io/searchak/webcomponent.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+			
+		}
+
+	],
+	"properties": {
+		"width": {
+			"type": "number",
+			"default": 300
+		},
+		"height": {
+			"type": "number",
+			"default": 50
+		},
+		"selectedValue": {
+			"type": "string",
+			"description": "Key result set"
+		}
+	},
+	"methods": {
+		"getValue": {
+			"returnType": "string",
+			"description": "Returns the selected value",
+			"parameters": []
+		},
+		"setDataModel": {
+			"description": "Sets the data",
+			"parameters": [
+				{
+					"name": "newData",
+					"type": "string[]",
+					"description": "Array of string items"
+				}
+			]
+		},
+		"getDataModel": {
+			"returnType": "string[]",
+			"description": "Returns the data",
+			"parameters": []
+		}
+	},
+	"events": {
+		"onSearch": {
+			"description": "On search event"
+		}
+	}
+}
+>>>>>>> 36d159bacedf65309658066d6d337af96c9e06d7:TEST iSearch.json
