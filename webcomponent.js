@@ -165,19 +165,24 @@
 		];
 
 		/* getter of selected value */
-		getValue() {
+		getSelectedValue() {
 			return this.selectedValue;
 		}
 
 		/* getter of data list */
-		getDataModel() {
+		getMembers() {
 			return this.dataModel;
 		}
 
 		/* setter od datalist to autocomplete*/
-		setDataModel(newdata) {
+		setMembers(newdata) {
 			this.dataModel = newdata;
 		}
+		// setPlaceholder (newplaceHolder){
+		// 	this.shadow.getElementById("myInput").
+		// 	//shadow.querySelector('#myInput').
+
+		// }
 	}
 	/* Define web component - input: tag and class */
 	customElements.define('com-iprosis-sample-search', ISearch);

@@ -36,12 +36,12 @@
 		}
 	},
 	"methods": {
-		"getValue": {
+		"getSelectedValue": {
 			"returnType": "string",
 			"description": "Returns the selected value",
 			"parameters": []
 		},
-		"setDataModel": {
+		"setMembers": {
 			"description": "Sets the data",
 			"parameters": [
 				{
@@ -51,7 +51,7 @@
 				}
 			]
 		},
-		"getDataModel": {
+		"getMembers": {
 			"returnType": "string[]",
 			"description": "Returns the data",
 			"parameters": []
