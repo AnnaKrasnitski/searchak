@@ -146,7 +146,7 @@
 					closeAllLists(e.target);
 				});
 			} // end of autocomplete
-			if (showSuggestions){
+			if (this.showSuggestions){
 				autocomplete(shadow.querySelector('#myInput'), that);
 			}
 		
