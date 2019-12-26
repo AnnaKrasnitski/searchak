@@ -185,14 +185,14 @@
 			//	res = [""];
 				for (let index = 0; index < newdata.length; index++) {
 					
-					if (disp == 'k'){
+					if (disp == 't'){
 						this.dataModel[index] = newdata[index].description;
 						console.log("  " +newdata[index].description);
-					} else if (disp == 't'){
+					} else if (disp == 'k'){
 						this.dataModel[index] = newdata[index].displayId;
 						console.log("  " +newdata[index].displayId);
 					} else {
-						this.dataModel[index] = newdata[index].description + ' ' + newdata[index].displayId
+						this.dataModel[index] = newdata[index].displayId + ' ' + newdata[index].description
 					}
 							
 				};	
