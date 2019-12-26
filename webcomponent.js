@@ -66,7 +66,7 @@
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			let that = this;
-			
+			var showSuggestions = true;
 			function autocomplete(inp, that) {
 				let currentFocus;
 				inp.addEventListener('input', function(e) {
@@ -145,8 +145,11 @@
 				document.addEventListener('click', function(e) {
 					closeAllLists(e.target);
 				});
+			} // end of autocomplete
+			if (showSuggestions){
+				autocomplete(shadow.querySelector('#myInput'), that);
 			}
-			autocomplete(shadow.querySelector('#myInput'), that);
+		
 
 		}  // end of constructor
 
@@ -187,6 +190,27 @@
 							
 				};	
 				console.log("  " +this.dataModel);
+			}
+			getDisplayType (){
+				if (this.disp == 'k'){
+					return 'key';
+				}
+				else if (this.disp == 't'){
+					return 'text';
+				}
+				else return 'key & text';
+			}
+
+			setSuggestions(bool){
+				if (bool){
+					showSuggestions = true;
+				}
+				else {
+					showSuggestions = false;
+				}
+			}
+			isEnabledSuggestions(){
+				return showSuggestions;
 			}
 
 

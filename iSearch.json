@@ -60,6 +60,26 @@
 			"returnType": "string[]",
 			"description": "Returns the data",
 			"parameters": []
+		},
+		"getDisplayType": {
+			"returnType": "string",
+			"description": "Returns display key (key , text or value)",
+			"parameters": []
+		},
+		"setSuggestions":{
+			"description": "Enable or Disable suggestions",
+			"parameters": [
+				{
+					"name": "bool",
+					"type": "boolean",
+					"description": "boolean: enable suggestions(true), disable(false)"
+				}
+			]
+		},
+		"isEnabledSuggestions":{
+			"returnType": "boolean",
+			"description": "Returns true if suggestions Enabled and false otherwise",
+			"parameters": []
 		}
 	},
 	"events": {
