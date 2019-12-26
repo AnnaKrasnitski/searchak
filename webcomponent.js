@@ -65,8 +65,8 @@
 			shadow.appendChild(tmpl.content.cloneNode(true));
 
 			let that = this;
-			//this.showSuggestions = true;
-			//this.display = 'k';
+			that.showSuggestions = true;
+			that.display = 'k';
 			
 			function autocomplete(inp, that) {
 				let currentFocus;
@@ -190,13 +190,13 @@
 					}
 							
 				};	
-				console.log("  " +this.dataModel);
+				//console.log("  " +this.dataModel);
 			}
 			getDisplayType (){
-				if (this.disp == 'k'){
+				if (this.display == 'k'){
 					return 'key';
 				}
-				else if (this.disp == 't'){
+				else if (this.display == 't'){
 					return 'text';
 				}
 				else return 'key & text';
