@@ -180,18 +180,22 @@
 		/* setter of datalist to autocomplete*/
 		setMembers(newdata,disp) {
 			this.display = disp;
+			console.log("  " +disp);
 			//  chosenDisplay(newdata,disp){
 			//	res = [""];
 				for (let index = 0; index < newdata.length; index++) {
+					
 					if (disp == 'k'){
 						this.dataModel[i] = newdata[index].description;
+						console.log("  " +newdata[index].description);
 					} else if (disp == 't'){
 						this.dataModel[i] = newdata[index].displayId;
+						console.log("  " +newdata[index].displayId);
 					} else {
 						this.dataModel[i] = newdata[index].description + ' ' + newdata[index].displayId
 					}
 							
-					};	
+				};	
 					//return res;
 			}
 			//chosenDisplay(newdata,disp);
