@@ -8,7 +8,7 @@
 	"newInstancePrefix": "iSearch",
 	"icon" : "https://1001freedownloads.s3.amazonaws.com/icon/thumb/358904/Organic-Search-icon.png",
 	"version": "1.0.0",
-
+	"imports": ["datasource"],
 	"webcomponents": [
 		{
 			"kind": "main",
@@ -46,7 +46,7 @@
 			"parameters": [
 				{
 					"name": "newData",
-					"type": "string[]",
+					"type": "MemberInfo[]",
 					"description": "Array of string items"
 				}
 			]

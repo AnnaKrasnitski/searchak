@@ -66,6 +66,7 @@
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			let that = this;
+			var display = "";
 			
 			function autocomplete(inp, that) {
 				let currentFocus;
@@ -150,6 +151,22 @@
 
 		}  // end of constructor
 
+		chosenDisplay(newdata,disp){
+			res = [""];
+			for (let index = 0; index < newdata.length; index++) {
+				if (disp == 'k'){
+					res = newdata[index].description;
+				} else if (disp == 'k'){
+					res = newdata[index].displayId;
+				} else {
+					res = newdata[index].description + ' ' + newdata[index].displayId
+				}
+				
+					
+				};	
+				return res;
+		}
+
 		/* initialization of selected value */
 		selectedValue = ''; 
 
@@ -170,19 +187,16 @@
 		}
 
 		/* getter of data list */
-		getMembers() {
+		getMembers(disp) {
 			return this.dataModel;
 		}
 
-		/* setter od datalist to autocomplete*/
-		setMembers(newdata) {
-			this.dataModel = newdata;
+		/* setter of datalist to autocomplete*/
+		setMembers(newdata,disp) {
+			this.display = disp;
+			this.dataModel = chosenDisplay(newdata,disp);
 		}
-		// setPlaceholder (newplaceHolder){
-		// 	this.shadow.getElementById("myInput").
-		// 	//shadow.querySelector('#myInput').
 
-		// }
 	}
 	/* Define web component - input: tag and class */
 	customElements.define('com-iprosis-sample-search', ISearch);
