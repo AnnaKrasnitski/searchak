@@ -180,25 +180,25 @@
 		/* setter of datalist to autocomplete*/
 		setMembers(newdata,disp) {
 			this.display = disp;
-			this.dataModel =  chosenDisplay(newdata,disp){
-				res = [""];
+			//  chosenDisplay(newdata,disp){
+			//	res = [""];
 				for (let index = 0; index < newdata.length; index++) {
 					if (disp == 'k'){
-						return newdata[index].description;
+						this.dataModel = newdata[index].description;
 					} else if (disp == 'k'){
-						return newdata[index].displayId;
+						this.dataModel = newdata[index].displayId;
 					} else {
-						return newdata[index].description + ' ' + newdata[index].displayId
+						this.dataModel = newdata[index].description + ' ' + newdata[index].displayId
 					}
-					
-						
+							
 					};	
-					return res;
+					//return res;
 			}
 			//chosenDisplay(newdata,disp);
 		}
 
-	}
+	} //end of class
+
 	/* Define web component - input: tag and class */
 	customElements.define('com-iprosis-sample-search', ISearch);
 })();

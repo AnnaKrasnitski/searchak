@@ -48,6 +48,11 @@
 					"name": "newData",
 					"type": "MemberInfo[]",
 					"description": "Array of string items"
+				},
+				{
+					"name": "display",
+					"type": "string",
+					"description": "display key(k), text(t) or both(kt)"
 				}
 			]
 		},
