@@ -184,11 +184,11 @@
 			//	res = [""];
 				for (let index = 0; index < newdata.length; index++) {
 					if (disp == 'k'){
-						this.dataModel = newdata[index].description;
-					} else if (disp == 'k'){
-						this.dataModel = newdata[index].displayId;
+						this.dataModel[i] = newdata[index].description;
+					} else if (disp == 't'){
+						this.dataModel[i] = newdata[index].displayId;
 					} else {
-						this.dataModel = newdata[index].description + ' ' + newdata[index].displayId
+						this.dataModel[i] = newdata[index].description + ' ' + newdata[index].displayId
 					}
 							
 					};	
