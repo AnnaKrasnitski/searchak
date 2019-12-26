@@ -195,7 +195,7 @@
 					//return res;
 			}
 			//chosenDisplay(newdata,disp);
-		}
+
 
 	} //end of class
 
