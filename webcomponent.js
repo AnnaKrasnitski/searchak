@@ -66,7 +66,6 @@
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			let that = this;
-			var display = "";
 			
 			function autocomplete(inp, that) {
 				let currentFocus;
@@ -158,13 +157,7 @@
 
 		//template until setter is pressed
 		dataModel = [ 
-			'Afghanistan',
-			'Albania',
-			'Algeria',
-			'Andorra',
-			'Angola',
-			'Anguilla',
-			'Antigua'
+			'Search'
 		];
 
 		/* getter of selected value */
@@ -180,25 +173,22 @@
 		/* setter of datalist to autocomplete*/
 		setMembers(newdata,disp) {
 			this.display = disp;
-			console.log("  " +disp);
-			//  chosenDisplay(newdata,disp){
-			//	res = [""];
 				for (let index = 0; index < newdata.length; index++) {
 					
 					if (disp == 't'){
 						this.dataModel[index] = newdata[index].description;
-						console.log("  " +newdata[index].description);
+						
 					} else if (disp == 'k'){
 						this.dataModel[index] = newdata[index].displayId;
-						console.log("  " +newdata[index].displayId);
+						
 					} else {
 						this.dataModel[index] = newdata[index].displayId + ' ' + newdata[index].description
 					}
 							
 				};	
-					//return res;
+				console.log("  " +this.dataModel);
 			}
-			//chosenDisplay(newdata,disp);
+
 
 
 	} //end of class
