@@ -148,10 +148,8 @@
 					closeAllLists(e.target);
 				});
 			} // end of autocomplete
-			if (that.showSuggestions){
+
 				autocomplete(shadow.querySelector('#myInput'), that);
-			}
-		
 
 		}  // end of constructor
 
