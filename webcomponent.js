@@ -66,7 +66,7 @@
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
 			let that = this;
-			var showSuggestions = true;
+			this.showSuggestions = true;
 			function autocomplete(inp, that) {
 				let currentFocus;
 				inp.addEventListener('input', function(e) {
@@ -203,14 +203,14 @@
 
 			setSuggestions(bool){
 				if (bool){
-					showSuggestions = true;
+					this.showSuggestions = true;
 				}
 				else {
-					showSuggestions = false;
+					this.showSuggestions = false;
 				}
 			}
 			isEnabledSuggestions(){
-				return showSuggestions;
+				return this.showSuggestions;
 			}
 
 
