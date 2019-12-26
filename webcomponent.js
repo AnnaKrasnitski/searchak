@@ -65,8 +65,8 @@
 			shadow.appendChild(tmpl.content.cloneNode(true));
 
 			let that = this;
-			this.showSuggestions = true;
-			this.display = 'k';
+			//this.showSuggestions = true;
+			//this.display = 'k';
 			
 			function autocomplete(inp, that) {
 				let currentFocus;
