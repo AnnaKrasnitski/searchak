@@ -151,21 +151,7 @@
 
 		}  // end of constructor
 
-		chosenDisplay(newdata,disp){
-			res = [""];
-			for (let index = 0; index < newdata.length; index++) {
-				if (disp == 'k'){
-					res = newdata[index].description;
-				} else if (disp == 'k'){
-					res = newdata[index].displayId;
-				} else {
-					res = newdata[index].description + ' ' + newdata[index].displayId
-				}
-				
-					
-				};	
-				return res;
-		}
+		
 
 		/* initialization of selected value */
 		selectedValue = ''; 
@@ -194,7 +180,22 @@
 		/* setter of datalist to autocomplete*/
 		setMembers(newdata,disp) {
 			this.display = disp;
-			this.dataModel = chosenDisplay(newdata,disp);
+			this.dataModel =  chosenDisplay(newdata,disp){
+				res = [""];
+				for (let index = 0; index < newdata.length; index++) {
+					if (disp == 'k'){
+						return newdata[index].description;
+					} else if (disp == 'k'){
+						return newdata[index].displayId;
+					} else {
+						return newdata[index].description + ' ' + newdata[index].displayId
+					}
+					
+						
+					};	
+					return res;
+			}
+			//chosenDisplay(newdata,disp);
 		}
 
 	}
