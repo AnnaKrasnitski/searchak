@@ -1,7 +1,5 @@
 (function() {
-	console.log(1);
 	let tmpl = document.createElement('template');
-	console.log(2);
 	tmpl.innerHTML = `
 		<style>
 			* {
@@ -65,8 +63,11 @@
 			super();
 			let shadow = this.attachShadow({ mode: 'open' });
 			shadow.appendChild(tmpl.content.cloneNode(true));
+
 			let that = this;
 			this.showSuggestions = true;
+			this.display = 'k';
+			
 			function autocomplete(inp, that) {
 				let currentFocus;
 				inp.addEventListener('input', function(e) {
