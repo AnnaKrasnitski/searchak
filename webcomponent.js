@@ -65,6 +65,7 @@
 			shadow.appendChild(tmpl.content.cloneNode(true));
 
 			let that = this;
+
 			that.showSuggestions = true;
 			that.display = 'k';
 			
@@ -147,7 +148,7 @@
 					closeAllLists(e.target);
 				});
 			} // end of autocomplete
-			if (this.showSuggestions){
+			if (that.showSuggestions){
 				autocomplete(shadow.querySelector('#myInput'), that);
 			}
 		
