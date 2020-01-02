@@ -171,14 +171,15 @@
 
 		/* getter of data list */
 		getMembers() {
-			if (this.display == 'k'){
-				return this.dataModel;
-			}
-			else if (this.display == 't'){
-				return this.dataModel1;
-			}
-			else if (this.display == 'kt'){
-				return this.dataModel2;
+			return this.dataModel;
+			// if (this.display == 'k'){
+			// 	return this.dataModel0;
+			// }
+			// else if (this.display == 't'){
+			// 	return this.dataModel1;
+			// }
+			// else if (this.display == 'kt'){
+			// 	return this.dataModel2;
 			}
 		}
 
