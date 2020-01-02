@@ -192,16 +192,16 @@
 						this.dataModel1[index] = newdata[index].description;
 						this.dataModel2[index] = newdata[index].displayId + ' ' + newdata[index].description;			
 				};	
-				chooseData();
-				// if (this.display == 'k'){
-				// 	this.dataModel = this.dataModel0;
-				// }
-				// else if (this.display == 't'){
-				// 	this.dataModel = this.dataModel1;
-				// }
-				// else if (this.display == 'kt'){
-				// 	this.dataModel=this.dataModel2;
-				// }
+				//chooseData();
+				if (this.display == 'k'){
+					this.dataModel = this.dataModel0;
+				}
+				else if (this.display == 't'){
+					this.dataModel = this.dataModel1;
+				}
+				else if (this.display == 'kt'){
+					this.dataModel=this.dataModel2;
+				}
 			}
 
 			getPlaceholder(){
@@ -224,16 +224,16 @@
 
 			setDisplayType(displayType){
 				this.display = displayType;
-				chooseData();
-				// if (this.display == 'k'){
-				// 	this.dataModel = this.dataModel0;
-				// }
-				// else if (this.display == 't'){
-				// 	this.dataModel = this.dataModel1;
-				// }
-				// else if (this.display == 'kt'){
-				// 	this.dataModel=this.dataModel2;
-				// }
+				//chooseData();
+				if (this.display == 'k'){
+					this.dataModel = this.dataModel0;
+				}
+				else if (this.display == 't'){
+					this.dataModel = this.dataModel1;
+				}
+				else if (this.display == 'kt'){
+					this.dataModel=this.dataModel2;
+				}
 			}
 
 			setEnableSuggestions(bool){
@@ -249,17 +249,17 @@
 				return this.showSuggestions;
 			}
 
-			chooseData(){
-				if (this.display == 'k'){
-					this.dataModel = this.dataModel0;
-				}
-				else if (this.display == 't'){
-					this.dataModel = this.dataModel1;
-				}
-				else if (this.display == 'kt'){
-					this.dataModel=this.dataModel2;
-				}
-			}
+			// chooseData(){
+			// 	if (this.display == 'k'){
+			// 		this.dataModel = this.dataModel0;
+			// 	}
+			// 	else if (this.display == 't'){
+			// 		this.dataModel = this.dataModel1;
+			// 	}
+			// 	else if (this.display == 'kt'){
+			// 		this.dataModel=this.dataModel2;
+			// 	}
+			// }
 
 	} //end of class
 
