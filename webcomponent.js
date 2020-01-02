@@ -169,7 +169,7 @@
 		getSelectedValue() {
 			//return this.selectedValue;
 			// if (this.display == 'k'){
-				return this.dataModel0[that.index];
+				return this.dataModel0[this.index];
 		// 	}
 		// 	else if (this.display == 't'){
 		// 		return this.dataModel1[that.index];
@@ -184,7 +184,7 @@
 			//  	return this.dataModel0[that.index];
 			//  }
 			// else if (this.display == 't'){
-			 	return this.dataModel1[that.index];
+			 	return this.dataModel1[this.index];
 			//  }
 			//  else if (this.display == 'kt'){
 			//  	return this.dataModel2[that.index];
