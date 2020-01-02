@@ -69,8 +69,8 @@
 			that.showSuggestions = true;
 			that.display = 'k';
 			that.input = shadow.querySelector('#myInput');
-			console.log( "1!!!!!!!!!!");
-			console.log(that.input.placeholder);
+
+
 			function autocomplete(that) {
 				let inp = that.input;
 				let currentFocus;
@@ -203,11 +203,14 @@
 			}
 
 			getPlaceholder(){
-				return this.input//innerHTML.placeholder;
+				console.log(that.input.placeholder);
+				return this.input.placeholder;
+				
 			}
 
 			setPlaceholder(placeholderName){
-				this.input.innerHTML.placeholder = placeholderName;
+				this.input.placeholder = placeholderName;
+				console.log(that.input.placeholder);
 			}
 
 			getDisplayType (){
