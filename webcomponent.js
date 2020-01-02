@@ -97,7 +97,7 @@
 								that.selectedValue = this.innerText;
 								inp.value = this.innerText;
 								closeAllLists();
-								that.index = i; ////////////
+								that.index = i;
 							});
 							a.appendChild(b);
 						}
@@ -199,6 +199,14 @@
 				else if (this.display == 'kt'){
 					this.dataModel=this.dataModel2;
 				}
+			}
+
+			getPlaceholder(){
+				return this.input.innerHTML.placeholder;
+			}
+
+			setPlaceholder(placeholderName){
+				this.input.innerHTML.placeholder = placeholderName;
 			}
 
 			getDisplayType (){

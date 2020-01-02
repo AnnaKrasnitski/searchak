@@ -81,6 +81,21 @@
 				}
 			]
 		},
+		"getPlaceholder": {
+			"returnType": "string",
+			"description": "Returns placeholder value",
+			"parameters": []
+		},
+		"setPlaceholder":{
+			"description": "sets placeholder",
+			"parameters": [
+				{
+					"name": "placeholder",
+					"type": "string",
+					"description": "set placegolder, default 'Search'"
+				}
+			]
+		},
 		"setSuggestions":{
 			"description": "Enable or Disable suggestions",
 			"parameters": [
