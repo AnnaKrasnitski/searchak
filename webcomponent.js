@@ -175,8 +175,9 @@
 		selectedValue = ''; 
 
 		//template until setter is pressed
-		dataModel = [ 
+		dataModel = [ [
 			'Search'
+		]
 		];
 
 		/* getter of selected value */
@@ -201,21 +202,19 @@
 		/* setter of datalist to autocomplete*/
 		setMembers(newdata,disp) {
 			this.display = disp;
-				for (let j=0; j<3; j++){
 				for (let index = 0; index < newdata.length; index++) {
 					
 				//	if (disp == 'k'){
-						this.dataModel[j][index] = newdata[index].displayId;
+						this.dataModel[0][index] = newdata[index].displayId;
 						
 				//	} else if (disp == 't'){
-						this.dataModel[j][index] = newdata[index].description;
+						this.dataModel[1][index] = newdata[index].description;
 						
 				//	} else {
-						this.dataModel[j][index] = newdata[index].displayId + ' ' + newdata[index].description
+						this.dataModel[2][index] = newdata[index].displayId + ' ' + newdata[index].description
 				//	}
 							
 				};	
-			};
 				//console.log("  " +this.dataModel);
 			}
 
