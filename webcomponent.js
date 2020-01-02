@@ -203,14 +203,14 @@
 			}
 
 			getPlaceholder(){
-				console.log(that.input.placeholder);
+				console.log(this.input.placeholder);
 				return this.input.placeholder;
 				
 			}
 
 			setPlaceholder(placeholderName){
 				this.input.placeholder = placeholderName;
-				console.log(that.input.placeholder);
+				console.log(this.input.placeholder);
 			}
 
 			getDisplayType (){
