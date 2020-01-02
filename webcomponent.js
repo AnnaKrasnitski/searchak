@@ -190,7 +190,16 @@
 						this.dataModel1[index] = newdata[index].description;
 						this.dataModel2[index] = newdata[index].displayId + ' ' + newdata[index].description;			
 				};	
-				chooseData();
+				//chooseData();
+				if (this.display == 'k'){
+					this.dataModel = this.dataModel0;
+				}
+				else if (this.display == 't'){
+					this.dataModel = this.dataModel1;
+				}
+				else if (this.display == 'kt'){
+					this.dataModel=this.dataModel2;
+				}
 			}
 
 			getDisplayType (){
@@ -205,7 +214,16 @@
 
 			setDisplayType(displayType){
 				this.display = displayType;
-				chooseData();
+				//chooseData();
+				if (this.display == 'k'){
+					this.dataModel = this.dataModel0;
+				}
+				else if (this.display == 't'){
+					this.dataModel = this.dataModel1;
+				}
+				else if (this.display == 'kt'){
+					this.dataModel=this.dataModel2;
+				}
 			}
 
 			setSuggestions(bool){
@@ -220,17 +238,17 @@
 				return this.showSuggestions;
 			}
 
-			chooseData(){
-				if (this.display == 'k'){
-					this.dataModel = this.dataModel0;
-				}
-				else if (this.display == 't'){
-					this.dataModel = this.dataModel1;
-				}
-				else if (this.display == 'kt'){
-					this.dataModel=this.dataModel2;
-				}
-			}
+			// chooseData(){
+			// 	if (this.display == 'k'){
+			// 		this.dataModel = this.dataModel0;
+			// 	}
+			// 	else if (this.display == 't'){
+			// 		this.dataModel = this.dataModel1;
+			// 	}
+			// 	else if (this.display == 'kt'){
+			// 		this.dataModel=this.dataModel2;
+			// 	}
+			// }
 
 
 
