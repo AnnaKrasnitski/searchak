@@ -75,11 +75,14 @@
 
 				let inp = that.input;
 				let currentFocus;
-				console.log ("suggest:"); ////////////
-			console.log(that.showSuggestions); ////////////
-			if (that.showSuggestions){ ///////////
-				
+			
+
 				inp.addEventListener('input', function(e) {
+
+					console.log ("suggest:"); ////////////
+					console.log(that.showSuggestions); ////////////
+					if (that.showSuggestions){ ///////////
+
 					let val = this.value;
 					closeAllLists();
 					currentFocus = -1;
@@ -109,8 +112,14 @@
 							a.appendChild(b);
 						}
 					}
+					}// end auto suggest
 				});
 				inp.addEventListener('keydown', function(e) {
+
+					console.log ("suggest:"); ////////////
+					console.log(that.showSuggestions); ////////////
+					if (that.showSuggestions){ ///////////
+
 					var x = shadow.getElementById(
 						this.id + 'autocomplete-list'
 					);
@@ -130,10 +139,11 @@
 							if (x) x[currentFocus].click();
 						}
 					}
+						}// end auto suggest
 				});
 
 
-			}// end auto suggest
+			
 
 				function addActive(x) {
 					if (!x) return false;
