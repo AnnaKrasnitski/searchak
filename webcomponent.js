@@ -68,8 +68,10 @@
 			that.index = 0;
 			that.showSuggestions = true;
 			that.display = 'k';
+			that.input = shadow.querySelector('#myInput');
 			
-			function autocomplete(inp, that) {
+			function autocomplete(that) {
+				let inp = that.input;
 				let currentFocus;
 				inp.addEventListener('input', function(e) {
 					let val = this.value;
@@ -150,7 +152,7 @@
 				});
 			} // end of autocomplete
 
-				autocomplete(shadow.querySelector('#myInput'), that);
+				autocomplete(that);
 
 		}  // end of constructor
 
@@ -167,42 +169,16 @@
 
 		/* getter of selected value */
 		getSelectedValue() {
-			//return this.selectedValue;
-			// if (this.display == 'k'){
 				return this.dataModel0[this.index];
-		// 	}
-		// 	else if (this.display == 't'){
-		// 		return this.dataModel1[that.index];
-		// 	}
-		// 	else if (this.display == 'kt'){
-		// 		return this.dataModel2[that.index];
-		//    }
 		}
 
 		getSelectedText(){
-			// if (this.display == 'k'){
-			//  	return this.dataModel0[that.index];
-			//  }
-			// else if (this.display == 't'){
 			 	return this.dataModel1[this.index];
-			//  }
-			//  else if (this.display == 'kt'){
-			//  	return this.dataModel2[that.index];
-			// }
 		}
 
 		/* getter of data list */
 		getMembers() {
 			return this.dataModel;
-			// if (this.display == 'k'){
-			// 	return this.dataModel0;
-			// }
-			// else if (this.display == 't'){
-			// 	return this.dataModel1;
-			// }
-			// else if (this.display == 'kt'){
-			// 	return this.dataModel2;
-			//}
 		}
 
 		/* setter of datalist to autocomplete*/
