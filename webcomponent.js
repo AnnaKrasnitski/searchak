@@ -79,19 +79,19 @@
 					a.id = this.id + 'autocomplete-list';
 					a.classList.add('autocomplete-items');
 					this.parentNode.appendChild(a);
-					
-					for (let i = 0; i < that.DataModelByDisplay.length; i++) {
+					that.dataModel = DataModelByDisplay();
+					for (let i = 0; i < that.dataModel.length; i++) {
 						if (
-							that.DataModelByDisplay[i]
+							that.dataModel[i]
 								.substr(0, val.length)
 								.toUpperCase() == val.toUpperCase()
 						) {
 							let b = document.createElement('div');
 							b.innerHTML =
 								'<strong>' +
-								that.DataModelByDisplay[i].substr(0, val.length) +
+								that.dataModel[i].substr(0, val.length) +
 								'</strong>' +
-								that.DataModelByDisplay[i].substr(val.length);
+								that.dataModel[i].substr(val.length);
 							b.addEventListener('click', function(e) {
 								that.selectedValue = this.innerText;
 								inp.value = this.innerText;
@@ -175,9 +175,10 @@
 		selectedValue = ''; 
 
 		//template until setter is pressed
-		dataModel = [ [
-			'Search'
-		]
+		dataModel = [
+			['Search'],
+			[''],
+			['']
 		];
 
 		/* getter of selected value */
@@ -226,6 +227,10 @@
 					return 'text';
 				}
 				else return 'key & text';
+			}
+
+			setDisplayType (disp){
+				this.display = disp;
 			}
 
 			setSuggestions(bool){
