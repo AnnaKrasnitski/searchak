@@ -193,15 +193,15 @@
 						this.dataModel2[index] = newdata[index].displayId + ' ' + newdata[index].description;			
 				};	
 				chooseData();
-				if (this.display == 'k'){
-					this.dataModel = this.dataModel0;
-				}
-				else if (this.display == 't'){
-					this.dataModel = this.dataModel1;
-				}
-				else if (this.display == 'kt'){
-					this.dataModel=this.dataModel2;
-				}
+				// if (this.display == 'k'){
+				// 	this.dataModel = this.dataModel0;
+				// }
+				// else if (this.display == 't'){
+				// 	this.dataModel = this.dataModel1;
+				// }
+				// else if (this.display == 'kt'){
+				// 	this.dataModel=this.dataModel2;
+				// }
 			}
 
 			getPlaceholder(){
@@ -225,15 +225,15 @@
 			setDisplayType(displayType){
 				this.display = displayType;
 				chooseData();
-				if (this.display == 'k'){
-					this.dataModel = this.dataModel0;
-				}
-				else if (this.display == 't'){
-					this.dataModel = this.dataModel1;
-				}
-				else if (this.display == 'kt'){
-					this.dataModel=this.dataModel2;
-				}
+				// if (this.display == 'k'){
+				// 	this.dataModel = this.dataModel0;
+				// }
+				// else if (this.display == 't'){
+				// 	this.dataModel = this.dataModel1;
+				// }
+				// else if (this.display == 'kt'){
+				// 	this.dataModel=this.dataModel2;
+				// }
 			}
 
 			setEnableSuggestions(bool){
@@ -249,7 +249,7 @@
 				return this.showSuggestions;
 			}
 
-			chooseData = function(){
+			chooseData(){
 				if (this.display == 'k'){
 					this.dataModel = this.dataModel0;
 				}
