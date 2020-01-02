@@ -55,7 +55,7 @@
 			color: #ffffff; 
 		</style>
 		<div class="autocomplete" id="container">
-			<input id="myInput" type="text" name="myCountry" placeholder="Search">
+			<input id="myInput" type="text" name="myInput2" placeholder="Search">
 		</div>
 	`;
 	class ISearch extends HTMLElement {
@@ -152,8 +152,9 @@
 					closeAllLists(e.target);
 				});
 			} // end of autocomplete
-
+			if (that.showSuggestions){
 				autocomplete(that);
+			}
 
 		}  // end of constructor
 
@@ -203,14 +204,11 @@
 			}
 
 			getPlaceholder(){
-				console.log(this.input.placeholder);
-				return this.input.placeholder;
-				
+				return this.input.placeholder;				
 			}
 
 			setPlaceholder(placeholderName){
 				this.input.placeholder = placeholderName;
-				console.log(this.input.placeholder);
 			}
 
 			getDisplayType (){
