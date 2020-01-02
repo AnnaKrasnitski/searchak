@@ -72,6 +72,8 @@
 
 
 			function autocomplete(that) {
+				console.log ("suggest:");
+				console.log(that.showSuggestions);
 				let inp = that.input;
 				let currentFocus;
 				inp.addEventListener('input', function(e) {
