@@ -204,17 +204,17 @@
 
 		/* setter of datalist to autocomplete*/
 		setMembers(newdata,disp) {
-			this.display = disp;
+			that.display = disp;
 				for (let index = 0; index < newdata.length; index++) {
 					
 				//	if (disp == 'k'){
-						this.dataModel[0][index] = newdata[index].displayId;
+					that.dataModel[0][index] = newdata[index].displayId;
 						
 				//	} else if (disp == 't'){
-						this.dataModel[1][index] = newdata[index].description;
+					that.dataModel[1][index] = newdata[index].description;
 						
 				//	} else {
-						this.dataModel[2][index] = newdata[index].displayId + ' ' + newdata[index].description
+					that.dataModel[2][index] = newdata[index].displayId + ' ' + newdata[index].description
 				//	}
 							
 				};	
