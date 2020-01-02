@@ -79,18 +79,19 @@
 					a.id = this.id + 'autocomplete-list';
 					a.classList.add('autocomplete-items');
 					this.parentNode.appendChild(a);
-					for (let i = 0; i < that.dataModel.length; i++) {
+					
+					for (let i = 0; i < that.DataModelByDisplay.length; i++) {
 						if (
-							that.dataModel[i]
+							that.DataModelByDisplay[i]
 								.substr(0, val.length)
 								.toUpperCase() == val.toUpperCase()
 						) {
 							let b = document.createElement('div');
 							b.innerHTML =
 								'<strong>' +
-								that.dataModel[i].substr(0, val.length) +
+								that.DataModelByDisplay[i].substr(0, val.length) +
 								'</strong>' +
-								that.dataModel[i].substr(val.length);
+								that.DataModelByDisplay[i].substr(val.length);
 							b.addEventListener('click', function(e) {
 								that.selectedValue = this.innerText;
 								inp.value = this.innerText;
@@ -99,6 +100,7 @@
 							a.appendChild(b);
 						}
 					}
+				
 				});
 				inp.addEventListener('keydown', function(e) {
 					var x = shadow.getElementById(
@@ -144,6 +146,20 @@
 						}
 					}
 				}
+
+				function DataModelByDisplay(){
+					if (this.display == 'k'){
+						return this.dataModel[0];
+					}
+					else if (this.display == 't'){
+						return this.dataModel[1];
+					}
+					else if (this.display == 'kt'){
+						return this.dataModel[2];
+						}
+				}
+
+
 				document.addEventListener('click', function(e) {
 					closeAllLists(e.target);
 				});
@@ -169,28 +185,40 @@
 		}
 
 		/* getter of data list */
-		getMembers(disp) {
-			return this.dataModel;
+		getMembers() {
+				if (this.display == 'k'){
+					return this.dataModel[0];
+				}
+				else if (this.display == 't'){
+					return this.dataModel[1];
+				}
+				else if (this.display == 'k'){
+					return this.dataModel[2];
+					}
+
 		}
 
 		/* setter of datalist to autocomplete*/
 		setMembers(newdata,disp) {
 			this.display = disp;
+				for (let j=0; j<3; j++){
 				for (let index = 0; index < newdata.length; index++) {
 					
-					if (disp == 't'){
-						this.dataModel[index] = newdata[index].description;
+				//	if (disp == 'k'){
+						this.dataModel[j][index] = newdata[index].displayId;
 						
-					} else if (disp == 'k'){
-						this.dataModel[index] = newdata[index].displayId;
+				//	} else if (disp == 't'){
+						this.dataModel[j][index] = newdata[index].description;
 						
-					} else {
-						this.dataModel[index] = newdata[index].displayId + ' ' + newdata[index].description
-					}
+				//	} else {
+						this.dataModel[j][index] = newdata[index].displayId + ' ' + newdata[index].description
+				//	}
 							
 				};	
+			};
 				//console.log("  " +this.dataModel);
 			}
+
 			getDisplayType (){
 				if (this.display == 'k'){
 					return 'key';
