@@ -76,6 +76,16 @@
 				}
 			]
 		},
+		"setDisplayType":{
+			"description": "sets display type",
+			"parameters": [
+				{
+					"name": "displayType",
+					"type": "string",
+					"description": "key 'k' , text 't'  or key and text 'kt')"
+				}
+			]
+		},
 		"isEnabledSuggestions":{
 			"returnType": "boolean",
 			"description": "Returns true if suggestions Enabled and false otherwise",

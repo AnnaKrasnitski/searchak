@@ -69,10 +69,8 @@
 			that.showSuggestions = true;
 			that.display = 'k';
 			
-			
 			function autocomplete(inp, that) {
 				let currentFocus;
-				that.dataModel = DataModelByDisplay();
 				inp.addEventListener('input', function(e) {
 					let val = this.value;
 					closeAllLists();
@@ -81,7 +79,6 @@
 					a.id = this.id + 'autocomplete-list';
 					a.classList.add('autocomplete-items');
 					this.parentNode.appendChild(a);
-					
 					for (let i = 0; i < that.dataModel.length; i++) {
 						if (
 							that.dataModel[i]
@@ -102,7 +99,6 @@
 							a.appendChild(b);
 						}
 					}
-				
 				});
 				inp.addEventListener('keydown', function(e) {
 					var x = shadow.getElementById(
@@ -148,20 +144,6 @@
 						}
 					}
 				}
-
-				function DataModelByDisplay(){
-					if (that.display == 'k'){
-						return that.dataModel[0];
-					}
-					else if (that.display == 't'){
-						return that.dataModel[1];
-					}
-					else if (that.display == 'kt'){
-						return that.dataModel[2];
-						}
-				}
-
-
 				document.addEventListener('click', function(e) {
 					closeAllLists(e.target);
 				});
@@ -177,11 +159,10 @@
 		selectedValue = ''; 
 
 		//template until setter is pressed
-		dataModel = [
-			['Search'],
-			[''],
-			['']
-		];
+		dataModel = [''];
+		dataModel0 = ['Search'];
+		dataModel1 = ['Search'];
+		dataModel2 = ['Search'];
 
 		/* getter of selected value */
 		getSelectedValue() {
@@ -190,35 +171,26 @@
 
 		/* getter of data list */
 		getMembers() {
-				if (this.display == 'k'){
-					return this.dataModel[0];
-				}
-				else if (this.display == 't'){
-					return this.dataModel[1];
-				}
-				else if (this.display == 'k'){
-					return this.dataModel[2];
-					}
-
+			if (this.display == 'k'){
+				return this.dataModel;
+			}
+			else if (this.display == 't'){
+				return this.dataModel1;
+			}
+			else if (this.display == 'kt'){
+				return this.dataModel2;
+			}
 		}
 
 		/* setter of datalist to autocomplete*/
-		setMembers(newdata,disp) {
-			this.display = disp;
+		setMembers(newdata,displayType) {
+			this.display = displayType;
 				for (let index = 0; index < newdata.length; index++) {
-					
-				//	if (disp == 'k'){
-					this.dataModel[0][index] = newdata[index].displayId;
-						
-				//	} else if (disp == 't'){
-					this.dataModel[1][index] = newdata[index].description;
-						
-				//	} else {
-					this.dataModel[2][index] = newdata[index].displayId + ' ' + newdata[index].description
-				//	}
-							
+						this.dataModel0[index] = newdata[index].displayId;
+						this.dataModel1[index] = newdata[index].description;
+						this.dataModel2[index] = newdata[index].displayId + ' ' + newdata[index].description;			
 				};	
-				//console.log("  " +this.dataModel);
+				chooseData();
 			}
 
 			getDisplayType (){
@@ -231,8 +203,9 @@
 				else return 'key & text';
 			}
 
-			setDisplayType (disp){
-				this.display = disp;
+			setDisplayType(displayType){
+				this.display = displayType;
+				chooseData();
 			}
 
 			setSuggestions(bool){
@@ -245,6 +218,18 @@
 			}
 			isEnabledSuggestions(){
 				return this.showSuggestions;
+			}
+
+			chooseData(){
+				if (this.display == 'k'){
+					this.dataModel = this.dataModel0;
+				}
+				else if (this.display == 't'){
+					this.dataModel = this.dataModel1;
+				}
+				else if (this.display == 'kt'){
+					this.dataModel=this.dataModel2;
+				}
 			}
 
 
