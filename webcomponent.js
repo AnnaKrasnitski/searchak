@@ -116,9 +116,9 @@
 				});
 				inp.addEventListener('keydown', function(e) {
 
-					console.log ("suggest:"); ////////////
-					console.log(that.showSuggestions); ////////////
-					if (that.showSuggestions){ ///////////
+					//console.log ("suggest:"); ////////////
+					//console.log(that.showSuggestions); ////////////
+					//if (that.showSuggestions){ ///////////
 
 					var x = shadow.getElementById(
 						this.id + 'autocomplete-list'
@@ -139,7 +139,7 @@
 							if (x) x[currentFocus].click();
 						}
 					}
-						}// end auto suggest
+					//	}// end auto suggest
 				});
 
 
