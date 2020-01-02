@@ -65,7 +65,7 @@
 			shadow.appendChild(tmpl.content.cloneNode(true));
 
 			let that = this;
-
+			that.index = 0;
 			that.showSuggestions = true;
 			that.display = 'k';
 			
@@ -95,6 +95,7 @@
 								that.selectedValue = this.innerText;
 								inp.value = this.innerText;
 								closeAllLists();
+								that.index = i; ////////////
 							});
 							a.appendChild(b);
 						}
@@ -166,7 +167,28 @@
 
 		/* getter of selected value */
 		getSelectedValue() {
-			return this.selectedValue;
+			//return this.selectedValue;
+			if (this.display == 'k'){
+				return this.dataModel0[that.index];
+			}
+			else if (this.display == 't'){
+				return this.dataModel1[that.index];
+			}
+			else if (this.display == 'kt'){
+				return this.dataModel2[that.index];
+		   }
+		}
+
+		getSelectedText(){
+			if (this.display == 'k'){
+			 	return this.dataModel0[that.index];
+			 }
+			 else if (this.display == 't'){
+			 	return this.dataModel1[that.index];
+			 }
+			 else if (this.display == 'kt'){
+			 	return this.dataModel2[that.index];
+			}
 		}
 
 		/* getter of data list */
