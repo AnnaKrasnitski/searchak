@@ -70,7 +70,7 @@
 			that.display = 'k';
 			that.input = shadow.querySelector('#myInput');
 			console.log( "1!!!!!!!!!!");
-			console.log(that.input);
+			console.log(that.input.placeholder);
 			function autocomplete(that) {
 				let inp = that.input;
 				let currentFocus;
