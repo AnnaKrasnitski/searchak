@@ -68,6 +68,7 @@
 
 			that.showSuggestions = true;
 			that.display = 'k';
+			that.dataModel = DataModelByDisplay();
 			
 			function autocomplete(inp, that) {
 				let currentFocus;
@@ -79,7 +80,7 @@
 					a.id = this.id + 'autocomplete-list';
 					a.classList.add('autocomplete-items');
 					this.parentNode.appendChild(a);
-					that.dataModel = DataModelByDisplay();
+					
 					for (let i = 0; i < that.dataModel.length; i++) {
 						if (
 							that.dataModel[i]
