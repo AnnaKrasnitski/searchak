@@ -70,19 +70,13 @@
 			that.display = 'k';
 			that.input = shadow.querySelector('#myInput');
 
-
 			function autocomplete(that) {
 
 				let inp = that.input;
 				let currentFocus;
 			
-
 				inp.addEventListener('input', function(e) {
-
-					console.log ("suggest:"); ////////////
-					console.log(that.showSuggestions); ////////////
-					if (that.showSuggestions){ ///////////
-
+					if (that.showSuggestions){
 					let val = this.value;
 					closeAllLists();
 					currentFocus = -1;
@@ -112,14 +106,9 @@
 							a.appendChild(b);
 						}
 					}
-					}// end auto suggest
+					} // end auto suggest
 				});
 				inp.addEventListener('keydown', function(e) {
-
-					//console.log ("suggest:"); ////////////
-					//console.log(that.showSuggestions); ////////////
-					//if (that.showSuggestions){ ///////////
-
 					var x = shadow.getElementById(
 						this.id + 'autocomplete-list'
 					);
@@ -139,11 +128,7 @@
 							if (x) x[currentFocus].click();
 						}
 					}
-					//	}// end auto suggest
 				});
-
-
-			
 
 				function addActive(x) {
 					if (!x) return false;
@@ -173,11 +158,8 @@
 				});
 			} // end of autocomplete
 			
-				autocomplete(that);
-
+				autocomplete(that);				
 		}  // end of constructor
-
-		
 
 		/* initialization of selected value */
 		selectedValue = ''; 
@@ -210,7 +192,7 @@
 						this.dataModel1[index] = newdata[index].description;
 						this.dataModel2[index] = newdata[index].displayId + ' ' + newdata[index].description;			
 				};	
-				//chooseData();
+				chooseData();
 				if (this.display == 'k'){
 					this.dataModel = this.dataModel0;
 				}
@@ -242,7 +224,7 @@
 
 			setDisplayType(displayType){
 				this.display = displayType;
-				//chooseData();
+				chooseData();
 				if (this.display == 'k'){
 					this.dataModel = this.dataModel0;
 				}
@@ -254,7 +236,7 @@
 				}
 			}
 
-			setSuggestions(bool){
+			setEnableSuggestions(bool){
 				if (bool){
 					this.showSuggestions = true;
 				}
@@ -262,23 +244,22 @@
 					this.showSuggestions = false;
 				}
 			}
-			isEnabledSuggestions(){
+
+			isEnableSuggestions(){
 				return this.showSuggestions;
 			}
 
-			// chooseData(){
-			// 	if (this.display == 'k'){
-			// 		this.dataModel = this.dataModel0;
-			// 	}
-			// 	else if (this.display == 't'){
-			// 		this.dataModel = this.dataModel1;
-			// 	}
-			// 	else if (this.display == 'kt'){
-			// 		this.dataModel=this.dataModel2;
-			// 	}
-			// }
-
-
+			chooseData = function(){
+				if (this.display == 'k'){
+					this.dataModel = this.dataModel0;
+				}
+				else if (this.display == 't'){
+					this.dataModel = this.dataModel1;
+				}
+				else if (this.display == 'kt'){
+					this.dataModel=this.dataModel2;
+				}
+			}
 
 	} //end of class
 

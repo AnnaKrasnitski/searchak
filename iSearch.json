@@ -96,7 +96,7 @@
 				}
 			]
 		},
-		"setSuggestions":{
+		"setEnableSuggestions":{
 			"description": "Enable or Disable suggestions",
 			"parameters": [
 				{
@@ -107,7 +107,7 @@
 			]
 		},
 		
-		"isEnabledSuggestions":{
+		"isEnableSuggestions":{
 			"returnType": "boolean",
 			"description": "Returns true if suggestions Enabled and false otherwise",
 			"parameters": []
