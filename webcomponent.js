@@ -148,17 +148,17 @@
 					}
 				}
 
-				function DataModelByDisplay(){
-					if (that.display == 'k'){
-						return that.dataModel[0];
-					}
-					else if (that.display == 't'){
-						return that.dataModel[1];
-					}
-					else if (that.display == 'kt'){
-						return that.dataModel[2];
-						}
-				}
+				// function DataModelByDisplay(){
+				// 	if (that.display == 'k'){
+				// 		return that.dataModel[0];
+				// 	}
+				// 	else if (that.display == 't'){
+				// 		return that.dataModel[1];
+				// 	}
+				// 	else if (that.display == 'kt'){
+				// 		return that.dataModel[2];
+				// 		}
+				// }
 
 
 				document.addEventListener('click', function(e) {
@@ -170,7 +170,17 @@
 
 		}  // end of constructor
 
-		
+		 DataModelByDisplay(){
+			if (that.display == 'k'){
+				return that.dataModel[0];
+			}
+			else if (that.display == 't'){
+				return that.dataModel[1];
+			}
+			else if (that.display == 'kt'){
+				return that.dataModel[2];
+				}
+		}
 
 		/* initialization of selected value */
 		selectedValue = ''; 
