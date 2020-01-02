@@ -151,10 +151,10 @@
 					if (that.display == 'k'){
 						return this.dataModel[0];
 					}
-					else if (this.display == 't'){
+					else if (that.display == 't'){
 						return this.dataModel[1];
 					}
-					else if (this.display == 'kt'){
+					else if (that.display == 'kt'){
 						return this.dataModel[2];
 						}
 				}
