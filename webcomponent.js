@@ -180,7 +180,7 @@
 			// }
 			// else if (this.display == 'kt'){
 			// 	return this.dataModel2;
-			}
+			//}
 		}
 
 		/* setter of datalist to autocomplete*/
