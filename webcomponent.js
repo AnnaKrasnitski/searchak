@@ -83,6 +83,11 @@
 					a.id = this.id + 'autocomplete-list';
 					a.classList.add('autocomplete-items');
 					this.parentNode.appendChild(a);
+
+			console.log ("suggest:"); ////////////
+			console.log(that.showSuggestions); ////////////
+			if (that.showSuggestions){ ///////////
+
 					for (let i = 0; i < that.dataModel.length; i++) {
 						if (
 							that.dataModel[i]
@@ -126,6 +131,10 @@
 						}
 					}
 				});
+
+
+			}// end auto suggest
+
 				function addActive(x) {
 					if (!x) return false;
 					removeActive(x);
@@ -153,11 +162,8 @@
 					closeAllLists(e.target);
 				});
 			} // end of autocomplete
-			console.log ("suggest:");
-			console.log(this.showSuggestions);
-			if (this.showSuggestions){
+			
 				autocomplete(that);
-			}
 
 		}  // end of constructor
 
