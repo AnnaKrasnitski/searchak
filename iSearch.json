@@ -41,6 +41,11 @@
 			"description": "Returns the selected value",
 			"parameters": []
 		},
+		"getSelectedText": {
+			"returnType": "string",
+			"description": "Returns the selected text",
+			"parameters": []
+		},
 		"setMembers": {
 			"description": "Sets the data",
 			"parameters": [
@@ -66,16 +71,6 @@
 			"description": "Returns display key (key , text or value)",
 			"parameters": []
 		},
-		"setSuggestions":{
-			"description": "Enable or Disable suggestions",
-			"parameters": [
-				{
-					"name": "bool",
-					"type": "boolean",
-					"description": "boolean: enable suggestions(true), disable(false)"
-				}
-			]
-		},
 		"setDisplayType":{
 			"description": "sets display type",
 			"parameters": [
@@ -86,6 +81,17 @@
 				}
 			]
 		},
+		"setSuggestions":{
+			"description": "Enable or Disable suggestions",
+			"parameters": [
+				{
+					"name": "bool",
+					"type": "boolean",
+					"description": "boolean: enable suggestions(true), disable(false)"
+				}
+			]
+		},
+		
 		"isEnabledSuggestions":{
 			"returnType": "boolean",
 			"description": "Returns true if suggestions Enabled and false otherwise",

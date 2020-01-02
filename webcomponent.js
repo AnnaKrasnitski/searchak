@@ -168,27 +168,27 @@
 		/* getter of selected value */
 		getSelectedValue() {
 			//return this.selectedValue;
-			if (this.display == 'k'){
+			// if (this.display == 'k'){
 				return this.dataModel0[that.index];
-			}
-			else if (this.display == 't'){
-				return this.dataModel1[that.index];
-			}
-			else if (this.display == 'kt'){
-				return this.dataModel2[that.index];
-		   }
+		// 	}
+		// 	else if (this.display == 't'){
+		// 		return this.dataModel1[that.index];
+		// 	}
+		// 	else if (this.display == 'kt'){
+		// 		return this.dataModel2[that.index];
+		//    }
 		}
 
 		getSelectedText(){
-			if (this.display == 'k'){
-			 	return this.dataModel0[that.index];
-			 }
-			 else if (this.display == 't'){
+			// if (this.display == 'k'){
+			//  	return this.dataModel0[that.index];
+			//  }
+			// else if (this.display == 't'){
 			 	return this.dataModel1[that.index];
-			 }
-			 else if (this.display == 'kt'){
-			 	return this.dataModel2[that.index];
-			}
+			//  }
+			//  else if (this.display == 'kt'){
+			//  	return this.dataModel2[that.index];
+			// }
 		}
 
 		/* getter of data list */
