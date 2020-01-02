@@ -148,7 +148,7 @@
 				}
 
 				function DataModelByDisplay(){
-					if (this.display == 'k'){
+					if (that.display == 'k'){
 						return this.dataModel[0];
 					}
 					else if (this.display == 't'){
