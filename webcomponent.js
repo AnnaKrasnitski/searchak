@@ -149,13 +149,13 @@
 
 				function DataModelByDisplay(){
 					if (that.display == 'k'){
-						return this.dataModel[0];
+						return that.dataModel[0];
 					}
 					else if (that.display == 't'){
-						return this.dataModel[1];
+						return that.dataModel[1];
 					}
 					else if (that.display == 'kt'){
-						return this.dataModel[2];
+						return that.dataModel[2];
 						}
 				}
 
