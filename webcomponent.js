@@ -75,6 +75,10 @@
 
 				let inp = that.input;
 				let currentFocus;
+				console.log ("suggest:"); ////////////
+			console.log(that.showSuggestions); ////////////
+			if (that.showSuggestions){ ///////////
+				
 				inp.addEventListener('input', function(e) {
 					let val = this.value;
 					closeAllLists();
@@ -83,10 +87,6 @@
 					a.id = this.id + 'autocomplete-list';
 					a.classList.add('autocomplete-items');
 					this.parentNode.appendChild(a);
-
-			console.log ("suggest:"); ////////////
-			console.log(that.showSuggestions); ////////////
-			if (that.showSuggestions){ ///////////
 
 					for (let i = 0; i < that.dataModel.length; i++) {
 						if (
