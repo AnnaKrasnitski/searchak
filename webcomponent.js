@@ -69,7 +69,7 @@
 			that.showSuggestions = true;
 			that.display = 'k';
 			that.input = shadow.querySelector('#myInput');
-
+			that.dim = '';
 			function autocomplete(that) {
 
 				let inp = that.input;
@@ -202,6 +202,7 @@
 				else if (this.display == 'kt'){
 					this.dataModel=this.dataModel2;
 				}
+				this.dim = newdata[0].dimensionId;
 			}
 
 			getPlaceholder(){
@@ -250,7 +251,7 @@
 			}
 
 			getSelectedDimension(){
-				this.dataModel0[0].dimensionId;
+				return this.dim
 			}
 
 			// chooseData(){
