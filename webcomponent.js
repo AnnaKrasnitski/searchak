@@ -251,7 +251,7 @@
 			}
 
 			getSelectedDimension(){
-				return this.dim
+				return this.dim;
 			}
 
 			// chooseData(){
