@@ -111,6 +111,11 @@
 			"returnType": "boolean",
 			"description": "Returns true if suggestions Enabled and false otherwise",
 			"parameters": []
+		},
+		"getSelectedDimension": {
+			"returnType": "string",
+			"description": "Returns dimension",
+			"parameters": []
 		}
 	},
 	"events": {

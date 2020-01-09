@@ -249,6 +249,10 @@
 				return this.showSuggestions;
 			}
 
+			getSelectedDimension(){
+				this.dataModel0[0].dimensionId;
+			}
+
 			// chooseData(){
 			// 	if (this.display == 'k'){
 			// 		this.dataModel = this.dataModel0;
