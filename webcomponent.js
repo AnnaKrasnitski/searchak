@@ -69,7 +69,7 @@
 				font-size: 85%;
 				padding: 15px 32px;
 				text-align: center;
-				margin: 4px 2px;
+				margin: 3px 2px;
 				cursor: pointer;
 			 }
 			 .button:hover {background-color: #006bb3;}

@@ -12,7 +12,7 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-iprosis-sample-search",
+			"tag": "com-iprosis-search",
 			"url": "https://annaiProsis.github.io/searchak/webcomponent.js",
 			"integrity": "",
 			"ignoreIntegrity": true
