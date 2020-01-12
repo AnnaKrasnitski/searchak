@@ -62,23 +62,34 @@
 				flex-direction: row;
 			 }
 			 .btn{
-				color: white;
-				border-radius: 4px;
-				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-				background: #4db8ff; /* light blue */
-				font-size: 85%;
-				padding: 15px 32px;
-				text-align: center;
-				margin: 3px 2px;
+				display: inline-block;
+				border: none;
+				padding: 1rem 2rem;
+				margin: 0;
+				text-decoration: none;
+				background: #0069ed;
+				color: #ffffff;
+				font-family: sans-serif;
+				font-size: 1rem;
 				cursor: pointer;
+				text-align: center;
+				transition: background 250ms ease-in-out, 
+							transform 150ms ease;
+				-webkit-appearance: none;
+				-moz-appearance: none;
 			 }
-			 .button:hover {background-color: #006bb3;}
+			 button:hover,
+				button:focus {
+   					 background: #0053ba;
+				}
+			button:focus {
+  			  outline: 1px solid #fff;
+  			  outline-offset: -4px;
+				}
 
-			.button:active {
-  				background-color: #006bb3;
-  				box-shadow: 0 2px #666;
-  				transform: translateY(4px);
-			}
+button:active {
+    transform: scale(0.99);
+}
 		</style>
 		<div class="flex">
 		<div class="autocomplete" id="container">
