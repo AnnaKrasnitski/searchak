@@ -57,9 +57,21 @@
 			background-color: DodgerBlue !important; 
 			color: #ffffff; 
 			}
+			.flex {
+				display: flex;
+				flex-direction: row;
+			 }
+			 .btn{
+				 
+			 }
 		</style>
+		<div class="flex">
 		<div class="autocomplete" id="container">
 			<input id="myInput" type="text" name="myInput2" placeholder="Search">
+		</div>
+		<div>
+    	 <button type="button" class="btn">Search</button>
+   		</div>
 		</div>
 	`;
 	class ISearch extends HTMLElement {
