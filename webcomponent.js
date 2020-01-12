@@ -70,7 +70,7 @@
 				background: #0069ed;
 				color: #ffffff;
 				font-family: sans-serif;
-				font-size: 1rem;
+				font-size: 0.7rem;
 				cursor: pointer;
 				text-align: center;
 				transition: background 250ms ease-in-out, 
