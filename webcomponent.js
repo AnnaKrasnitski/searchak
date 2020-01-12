@@ -300,5 +300,5 @@
 	} //end of class
 
 	/* Define web component - input: tag and class */
-	customElements.define('com-iprosis-sample-search', ISearch);
+	customElements.define('com-iprosis-search', ISearch);
 })();
