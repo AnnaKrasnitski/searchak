@@ -38,13 +38,14 @@
 			top: 100%;
 			left: 0;
 			right: 0;
+			overflow-y:scroll;
 			}
 			.autocomplete-items div {
 			padding: 10px;
 			cursor: pointer;
 			background-color: #fff; 
 			border-bottom: 1px solid #d4d4d4; 
-			overflow:scroll;
+			
 			}
 			/*when hovering an item:*/
 			.autocomplete-items div:hover {
