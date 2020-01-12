@@ -62,7 +62,11 @@
 				flex-direction: row;
 			 }
 			 .btn{
-				 
+				color: white;
+				border-radius: 4px;
+				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+				background: rgb(66, 184, 221); /* light blue */
+				font-size: 85%;
 			 }
 		</style>
 		<div class="flex">
