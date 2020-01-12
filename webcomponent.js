@@ -44,6 +44,7 @@
 			cursor: pointer;
 			background-color: #fff; 
 			border-bottom: 1px solid #d4d4d4; 
+			overflow:scroll;
 			}
 			/*when hovering an item:*/
 			.autocomplete-items div:hover {
@@ -53,6 +54,7 @@
 			.autocomplete-active {
 			background-color: DodgerBlue !important; 
 			color: #ffffff; 
+			}
 		</style>
 		<div class="autocomplete" id="container">
 			<input id="myInput" type="text" name="myInput2" placeholder="Search">
