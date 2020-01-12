@@ -38,7 +38,8 @@
 			top: 100%;
 			left: 0;
 			right: 0;
-			overflow-y:scroll;
+			overflow-y:auto;
+			height:400px;
 			}
 			.autocomplete-items div {
 			padding: 10px;
