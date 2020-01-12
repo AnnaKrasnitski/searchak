@@ -65,9 +65,20 @@
 				color: white;
 				border-radius: 4px;
 				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-				background: rgb(66, 184, 221); /* light blue */
+				background: #4db8ff; /* light blue */
 				font-size: 85%;
+				padding: 15px 32px;
+				text-align: center;
+				margin: 4px 2px;
+				cursor: pointer;
 			 }
+			 .button:hover {background-color: #006bb3;}
+
+			.button:active {
+  				background-color: #006bb3;
+  				box-shadow: 0 2px #666;
+  				transform: translateY(4px);
+			}
 		</style>
 		<div class="flex">
 		<div class="autocomplete" id="container">
