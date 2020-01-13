@@ -60,7 +60,7 @@
 
 		</style>
 		<div class="autocomplete" id="container">
-			<input id="myInput" type="text" name="myInput2" placeholder="Search" max="10000">
+			<input id="myInput" type="text" name="myInput2" placeholder="Search" max="10000" enabled>
 		</div>
 	`;
 	class ISearch extends HTMLElement {
@@ -74,6 +74,7 @@
 			that.showSuggestions = true;
 			that.display = 'k';
 			that.input = shadow.querySelector('#myInput');
+			that.input.disabled = false;
 			that.dim = '';
 			function autocomplete(that) {
 
@@ -248,6 +249,7 @@
 				}
 				else {
 					this.showSuggestions = false;
+
 				}
 			}
 
