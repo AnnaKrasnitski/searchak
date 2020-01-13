@@ -116,6 +116,21 @@
 			"returnType": "string",
 			"description": "Returns dimension",
 			"parameters": []
+		},
+		"isEnabled": {
+			"returnType": "boolean",
+			"description": "Return is widget enabled",
+			"parameters": []
+		},
+		"getEnabled":{
+			"description": "enables/disables widget",
+			"parameters": [
+				{
+					"name": "bool",
+					"type": "boolean",
+					"description": "enable widget 'true' else 'false'"
+				}
+			]
 		}
 	},
 	"events": {

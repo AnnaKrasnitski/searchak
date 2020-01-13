@@ -60,7 +60,7 @@
 
 		</style>
 		<div class="autocomplete" id="container">
-			<input id="myInput" type="text" name="myInput2" placeholder="Search">
+			<input id="myInput" type="text" name="myInput2" placeholder="Search" max="10000">
 		</div>
 	`;
 	class ISearch extends HTMLElement {
@@ -257,6 +257,14 @@
 
 			getSelectedDimension(){
 				return this.dim;
+			}
+
+			setEnabled(bool){
+				this.input.disabled = bool;
+			}
+
+			isEnabled(){
+				return this.input.disabled;
 			}
 
 			// chooseData(){
