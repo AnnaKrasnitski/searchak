@@ -92,11 +92,12 @@
 					this.parentNode.appendChild(a);
 
 					for (let i = 0; i < that.dataModel.length; i++) {
+						var str = that.dataModel[i].toUpperCase();
 						if (
 							// that.dataModel[i]
 							// 	.substr(0, val.length)
 							// 	.toUpperCase() == val.toUpperCase()
-							that.dataModel[i].toUpperCase().includes(val.toUpperCase())
+							str.includes(val.toUpperCase())
 						) {
 							
 							let b = document.createElement('div');
@@ -105,7 +106,7 @@
 							// 	that.dataModel[i].substr(0, val.length) +
 							// 	'</strong>' +
 							// 	that.dataModel[i].substr(val.length);
-							var ind = that.dataModel[i].toUpperCase().indexof(val.toUpperCase());
+							var ind = str.indexof(val.toUpperCase());
 							b.innerHTML = that.dataModel[i].substr(0, ind) +
 							'<strong>' + that.dataModel[i].substr(ind+1, ind+1+val.length) + '</strong>' +
 							that.dataModel[i].substr( ind+1+val.length+1,ind+1+val.length+1 +that.dataModel[i].length);
