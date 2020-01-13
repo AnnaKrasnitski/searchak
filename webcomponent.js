@@ -108,6 +108,7 @@
 							// 	that.dataModel[i].substr(val.length);
 							var ind = str.indexof(val.toUpperCase());
 							console.log(str);
+							console.log(ind);
 							b.innerHTML = that.dataModel[i].substr(0, ind) +
 							'<strong>' + that.dataModel[i].substr(ind+1, ind+1+val.length) + '</strong>' +
 							that.dataModel[i].substr( ind+1+val.length+1,ind+1+val.length+1 +that.dataModel[i].length);
