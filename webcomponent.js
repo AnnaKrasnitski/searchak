@@ -90,20 +90,27 @@
 					a.id = this.id + 'autocomplete-list';
 					a.classList.add('autocomplete-items');
 					this.parentNode.appendChild(a);
-
 					for (let i = 0; i < that.dataModel.length; i++) {
 						if (
 							// that.dataModel[i]
 							// 	.substr(0, val.length)
 							// 	.toUpperCase() == val.toUpperCase()
 							that.dataModel[i].toUpperCase().includes(val.toUpperCase())
+							
 						) {
+							var ind = that.dataModel[i].toUpperCase().indexof(val.toUpperCase());
 							let b = document.createElement('div');
-							b.innerHTML =
-								'<strong>' +
-								that.dataModel[i].substr(0, val.length) +
-								'</strong>' +
-								that.dataModel[i].substr(val.length);
+							// b.innerHTML =
+							// 	'<strong>' +
+							// 	that.dataModel[i].substr(0, val.length) +
+							// 	'</strong>' +
+							// 	that.dataModel[i].substr(val.length);
+							b.innerHTML = that.dataModel[i].substr(0, ind) +
+							'<strong>' + that.dataModel[i].substr(ind+1, val.length) + '</strong>' +
+							 	that.dataModel[i].substr(val.length);
+							 	'</strong>' + that.dataModel[i].substr( val.length,that.dataModel[i].length);
+
+
 							b.addEventListener('click', function(e) {
 								that.selectedValue = this.innerText;
 								inp.value = this.innerText;
