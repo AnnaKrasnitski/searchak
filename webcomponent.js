@@ -96,7 +96,7 @@
 							// that.dataModel[i]
 							// 	.substr(0, val.length)
 							// 	.toUpperCase() == val.toUpperCase()
-							that.dataModel[i].toUpperCase.indexOf(val.toUpperCase())>-1
+							that.dataModel[i].substr(0, val.length).toUpperCase().indexOf(val.toUpperCase())>-1
 						) {
 							let b = document.createElement('div');
 							b.innerHTML =
