@@ -109,7 +109,7 @@
 							var ind = str.indexOf(val.toUpperCase());
 							b.innerHTML = that.dataModel[i].substr(0, ind) +
 							'<strong>' + that.dataModel[i].substr(ind+1, ind+val.length) + '</strong>' +
-							that.dataModel[i].substr(ind+val.length);
+							that.dataModel[i].substr(ind+val.length+1,that.dataModel.length);
 	
 							b.addEventListener('click', function(e) {
 								that.selectedValue = this.innerText;
