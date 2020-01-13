@@ -106,7 +106,7 @@
 							// 	that.dataModel[i].substr(0, val.length) +
 							// 	'</strong>' +
 							// 	that.dataModel[i].substr(val.length);
-							var ind = str.indexof(val.toUpperCase());
+							var ind = str.indexOf(val.toUpperCase());
 							console.log(str);
 							console.log(ind);
 							b.innerHTML = that.dataModel[i].substr(0, ind) +
