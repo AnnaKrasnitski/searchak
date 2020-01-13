@@ -93,9 +93,10 @@
 
 					for (let i = 0; i < that.dataModel.length; i++) {
 						if (
-							that.dataModel[i]
-								.substr(0, val.length)
-								.toUpperCase() == val.toUpperCase()
+							// that.dataModel[i]
+							// 	.substr(0, val.length)
+							// 	.toUpperCase() == val.toUpperCase()
+							that.dataModel[i].toUpperCase.indexOf(val.toUpperCase())>-1
 						) {
 							let b = document.createElement('div');
 							b.innerHTML =
