@@ -261,13 +261,13 @@
 				return this.dim;
 			}
 
-			setEnabled(bool){
-				this.input.disabled = bool;
-			}
+			// setEnabled(bool){
+			// 	this.input.disabled = bool;
+			// }
 
-			isEnabled(){
-				return this.input.disabled;
-			}
+			// isEnabled(){
+			// 	return this.input.disabled;
+			// }
 
 			// chooseData(){
 			// 	if (this.display == 'k'){
