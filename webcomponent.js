@@ -94,14 +94,22 @@
 					for (let i = 0; i < that.dataModel.length; i++) {
 						var str = that.dataModel[i].toUpperCase();
 						if (
+							// that.dataModel[i]
+							// 	.substr(0, val.length)
+							// 	.toUpperCase() == val.toUpperCase()
 							str.includes(val.toUpperCase())
-						) {							
+						) {
+							
 							let b = document.createElement('div');
+							// b.innerHTML =
+							// 	'<strong>' +
+							// 	that.dataModel[i].substr(0, val.length) +
+							// 	'</strong>' +
+							// 	that.dataModel[i].substr(val.length);
 							var ind = str.indexOf(val.toUpperCase());
-							//bold 
 							b.innerHTML = that.dataModel[i].substr(0, ind) +
 							'<strong>' + that.dataModel[i].substr(ind, val.length) + '</strong>' +
-							that.dataModel[i].substr(ind + val.length,that.dataModel.length);
+							that.dataModel[i].substr(ind + val.length);
 	
 							b.addEventListener('click', function(e) {
 								that.selectedValue = this.innerText;
